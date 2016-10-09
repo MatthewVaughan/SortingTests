@@ -29,6 +29,12 @@ public:
 	void init_array();
 	void selectionSort();
 	void insertionSort();
+	void mergeHelper(int data[], size_t inputSize);
+	void mergeSort();
+	void merge(int data[], int sizeOne, int sizeTwo);
+	void quickHelper(int data[], int inputSize);
+	void quickSort();
+	void partition(int data[], int inputSize, int& pivotIndex);
 	
 
 	friend ostream& operator<< (ostream& out, const Sort& s)

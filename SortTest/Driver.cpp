@@ -21,7 +21,21 @@ int main() {
 	clock_t diff2 = end2 - start2;
 	cout << "time taken= " << diff2 << " ticks or milliseconds" << "\n" << endl;
 	
-	
+	arr.init_array();
+	cout << "merge sort" << endl;
+	clock_t start3 = clock();
+	arr.mergeSort();
+	clock_t end3 = clock();
+	clock_t diff3 = end3 - start3;
+	cout << "time taken= " << diff3 << " ticks or milliseconds" << "\n" << endl;
+
+	arr.init_array();
+	cout << "quick sort" << endl;
+	clock_t start4 = clock();
+	arr.quickSort();
+	clock_t end4 = clock();
+	clock_t diff4 = end4 - start4;
+	cout << "time taken= " << diff4 << " ticks or milliseconds" << "\n\n\n" << endl;
 	//-------------------------------------------------------------
 	//**************PROOF******************************************
 	//-------------------------------------------------------------
@@ -40,6 +54,17 @@ int main() {
 	arr1.insertionSort();
 	cout << arr1 << "\n" << endl;
 
+	arr1.init_array();
+	cout << "Merge Sort Proof:" << endl;
+	cout << arr1;
+	arr1.mergeSort();
+	cout << arr1 << "\n" << endl;
+
+	arr1.init_array();
+	cout << "Quick Sort Proof:" << endl;
+	cout << arr1;
+	arr1.quickSort();
+	cout << arr1 << "\n" << endl;
 
 	system("PAUSE");
 }
